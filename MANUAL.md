@@ -76,8 +76,6 @@ code-signed. Choose **More info > Run anyway**.
    Compare it with the server's own (the window shows the command to run on the server)
    and click **Trust server**.
 
-   ![Verifying a server](docs/verify.png)
-
 4. **Type the password once.** A terminal window opens and asks for the server
    password. The password goes straight to `ssh`. The app never sees or stores it.
 5. The app tests the login. When the server shows **Ready for AI apps**, you are done.
@@ -184,7 +182,7 @@ The **Key file** line in the *Access* box shows the state as soon as you open th
 | Key is locked | The key has a passphrase. AI apps and `ssh` can't use it until you unlock it. |
 | Key file, unlocked | The key has a passphrase and is unlocked, until you close the app or until you lock it. |
 
-![A key that is unlocked until the app closes](docs/unlocked.png)
+![A key that has a passphrase and is locked](docs/key-locked.png)
 
 - **Passphrase** adds, changes or removes the passphrase. A terminal window opens and
   `ssh-keygen` asks for it. Leave the new passphrase empty to remove it.
@@ -195,8 +193,6 @@ The **Key file** line in the *Access* box shows the state as soon as you open th
   - *Until I lock it myself:* the key stays unlocked after the app closes, and after a
     restart of the computer.
 - **Lock** locks the key straight away. No passphrase is needed for that.
-
-![Choosing how long a key stays unlocked](docs/unlock-dialog.png)
 
 Things to know:
 

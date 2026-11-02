@@ -202,7 +202,7 @@ For more information, please refer to <https://unlicense.org/>
 ---
 
 ==============================================================================
-golang.org/x/exp/shiny  v0.0.0-20260908205506-85c1c2202aba
+golang.org/x/exp/shiny  v0.0.0-20261014143641-f0251eb4aa3e
 ==============================================================================
 
 Copyright 2009 The Go Authors.
@@ -234,7 +234,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ==============================================================================
-golang.org/x/image  v0.46.0
+golang.org/x/image  v0.47.0
 ==============================================================================
 
 Copyright 2009 The Go Authors.
@@ -266,7 +266,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ==============================================================================
-golang.org/x/net  v0.48.0
+golang.org/x/net  v0.62.0
 ==============================================================================
 
 Copyright 2009 The Go Authors.
@@ -298,7 +298,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ==============================================================================
-golang.org/x/sys  v0.48.0
+golang.org/x/sys  v0.49.0
 ==============================================================================
 
 Copyright 2009 The Go Authors.
@@ -330,7 +330,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ==============================================================================
-golang.org/x/text  v0.42.0
+golang.org/x/text  v0.43.0
 ==============================================================================
 
 Copyright 2009 The Go Authors.
@@ -362,7 +362,7 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ==============================================================================
-The Go standard library and runtime  go1.27.0
+The Go standard library and runtime  go1.27.3
 ==============================================================================
 
 Copyright 2009 The Go Authors.

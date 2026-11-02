@@ -91,6 +91,8 @@ The app is free to use, but it is not open source. In short:
 
 The exact terms are in [LICENSE](LICENSE). For anything it does not allow, ask ITEAdvisors first.
 
+The app is built with open-source libraries. Their licenses are in [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt).
+
 ## Disclaimer
 - **No warranty.** The app is provided as is, with no warranty of any kind. The author is not liable for any damage or loss from using it.
 - **You are responsible for what you allow.** The keys have no passphrase so that AI apps can log in without asking. Anyone, and any AI app, using your Windows account can then run any command on the servers you add, including destructive ones.

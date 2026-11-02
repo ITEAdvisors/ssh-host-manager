@@ -55,13 +55,13 @@ Download the app, add the server, type the password once. After that, any tool t
 No. The app is free to use, but the source code is private. You may not copy, modify or redistribute the app. See the [License](#license).
 
 **Does the app talk to the cloud?**  
-No. The only network activity is the SSH connections you create and a local TCP check of the address you enter. The donation link and the project page link open in your browser only if you click them.
+No. The only network activity is the SSH connections you create, plus one plain TCP connection to the server's address and port to check that it can be reached before its host key is read. The donation link and the project page link open in your browser only if you click them.
 
 **Is it safe to give AI agents passwordless SSH?**  
 The keys have no passphrase by default so unattended tools can use them. Anyone (or any AI) running under your Windows account can then run any command on the servers you add. Only add systems you own or are allowed to manage. The app shows this warning on first launch.
 
 **Can I use my existing keys?**  
-The app creates its own per-server keys and writes only its marked block in `config`. Your other keys and config entries are left alone.
+Yes. By default the app creates a new key for each server, but you can pick an existing key file in the **Key file** list instead. It writes only its marked block in `config`; your other keys and config entries are left alone.
 
 **Why not just use the PowerShell one-liner?**  
 You can. This exists for people who want the one-page GUI version that also handles fingerprints, known_hosts cleanup, per-server keys, and config hygiene.

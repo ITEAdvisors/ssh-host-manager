@@ -38,7 +38,10 @@ with no password and no prompts. The IP address works in place of the name.
   in **Settings > System > Optional features**.
 - The password for the server, one time, to install the key.
 
-The app does not need administrator rights and should not be run as administrator.
+The app does not need administrator rights and should not be run as administrator. The
+one exception is optional: the first time you unlock a key that has a passphrase, the app
+can turn on Windows' key agent service, and Windows asks for administrator permission
+for that once (see [Keys with a passphrase](#10-keys-with-a-passphrase)).
 
 ## 2. Start the app
 Download `SSHHostManager.exe` from the [Releases](https://github.com/ITEAdvisors/ssh-host-manager/releases/latest) page of this
@@ -223,7 +226,9 @@ Things to know:
 
 ## 12. Privacy and security
 **What the app connects to.** Only the servers you add, on the port you set, using
-the `ssh`, `ssh-keygen` and `ssh-keyscan` programs that come with Windows. It has no
+the `ssh`, `ssh-keygen` and `ssh-keyscan` programs that come with Windows. Before it
+reads a server's host key, the app itself opens one plain connection to that address
+and port to check that it can be reached. It has no
 accounts, no analytics, no update checks and no cloud service. See the
 [privacy policy](PRIVACY.md) for everything it stores.
 
@@ -250,8 +255,12 @@ who can use your Windows account can use them. You can add a passphrase and unlo
 key only when you want it used: see [Keys with a passphrase](#10-keys-with-a-passphrase). Each server gets its own key so that you can revoke
 one without touching the others.
 
-**No administrator rights.** Everything the app changes is inside your own user profile
-or the folder you chose.
+**No administrator rights, with one optional exception.** Everything the app changes is
+inside your own user profile or the folder you chose. The exception: if you unlock a key
+that has a passphrase while Windows' OpenSSH Authentication Agent is switched off, the
+app offers to turn it on. After you confirm, Windows asks for administrator permission
+once, and the service is set to start automatically. The app itself never runs as
+administrator.
 
 ## 13. Disclaimer
 - **No warranty.** The app is provided as is, with no warranty of any kind. The author

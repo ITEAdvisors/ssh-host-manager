@@ -29,8 +29,14 @@ advertising and no update checks. It only connects to the servers you add yourse
   opens a plain connection to that address and port to check that it can be reached.
 - If you enter a host name instead of an IP address, Windows looks the name up through
   your usual DNS server, as it does for any program.
-- If you choose a folder that OneDrive or another sync service watches, that service,
-  not this app, copies the files in it.
+- If the app works in a folder that OneDrive or another sync service watches, that
+  service, not this app, copies the files in it, including private keys that have no
+  passphrase. At first start the app uses `OneDrive\.ssh` automatically if that folder
+  already exists; you can switch to `C:\Users\<you>\.ssh` or another folder at the
+  bottom left of the window.
+- When a server has no user name set, `ssh` logs in with your Windows account name, so
+  that name is sent to the server. The label of each new key (`sshkeys-<server name>`)
+  is sent with the public key when it is installed.
 - Nothing else. The app contains no web client.
 
 ## Links
@@ -51,8 +57,13 @@ no information from anyone.
 ## Your control
 - **Delete a server** removes it from your `config` and its host key from `known_hosts`.
   You can also delete its key file in the same step.
-- **Uninstalling the app** removes the app and its settings file. The keys, `config` and
-  `known_hosts` are your files in your `.ssh` folder, so they stay until you delete them.
+- **Uninstalling the app** from the Microsoft Store removes the app and its settings
+  file. The download from GitHub has no installer: delete the exe, and delete
+  `%LOCALAPPDATA%\SSHHostManager` to remove its settings. Either way the keys, `config`
+  and `known_hosts` are your files in your `.ssh` folder, so they stay until you delete
+  them. Keys you unlocked "until I lock it" stay in Windows' key agent until you lock
+  them or remove them with `ssh-add -D`, and the agent service stays switched on if you
+  turned it on.
 - You can check the network claims yourself: open Windows Resource Monitor, go to the
   **Network** tab and watch `SSHHostManager.exe` and `ssh.exe`.
 
